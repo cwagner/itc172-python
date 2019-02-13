@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 
@@ -6,26 +8,31 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"> -->
+
 </head>
 
 <body>
-    <div class='jumbotron'>
-        <h1>Tech Reviews</h1>
-    </div>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="{% url 'index' %}">Python Club</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li><a class="navbar-brand" href="{% url 'resources' %}">Resources</a></li>
-            </ul>
+        <div class='jumbotron'>
+            <h1>Python Club</h1>
         </div>
-    </nav>
-    <div class="container-fluid">
-        {% block content %}
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="{% url 'index' %}">Python Club</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a class="navbar-brand" href="{% url 'resources' %}">Resources</a></li>
+                    <li><a class="navbar-brand" href="{% url 'meetings' %}">Meetings</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id='wrapper'>
+        <div class="container-fluid">
+            {% block content %}
 
-        {% endblock content %}
+            {% endblock content %}
+        </div>
     </div>
 </body>
 
