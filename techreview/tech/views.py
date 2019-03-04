@@ -35,7 +35,7 @@ def newProduct(request):
     return render(request, 'tech/newproduct.html', {'form': form})
 
 def loginmessage(request):
-    return render(request, 'club/loginmessage.html')
+    return render(request, 'tech/loginmessage.html')
 
 def logoutmessage(request):
-    return render(request, 'club/logoutmessage.html')
+    return render(request, 'tech/logoutmessage.html')
